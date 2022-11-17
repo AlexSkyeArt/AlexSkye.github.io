@@ -146,10 +146,10 @@ input, select, textarea {
 		-ms-overflow-style: scrollbar;
 	}
 
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 300px) {
 
 		html, body {
-			min-width: 480px;
+			min-width: 300px;
 		}
 
 	}
@@ -218,8 +218,8 @@ input, select, textarea {
 	}
 
 		a:hover {
-			border-bottom-color: transparent;
-			color: #34a58e !important;
+			border-bottom-color: solid;
+			color: #b9581f !important;
 		}
 
 	strong, b {
