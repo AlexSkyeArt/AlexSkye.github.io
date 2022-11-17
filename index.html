@@ -10,7 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>			
+	
 	</head>
 	<body class="is-preload">
 
@@ -18,15 +19,33 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html"><strong>Alex Skye</strong> [portfolio]</a></h1>
-						<h1><a href="stickers.html"><strong>Sticker Designs</a></h1>
+					<header id="header" class="desktop-header">
+						<h1 class="menu-item"><a href="index.html"><strong>Alex Skye</strong> [portfolio]</a></h1>
+						<h1 class="menu-item"><a href="stickers.html"><strong>Sticker Designs</strong></a></h1>
 						<nav>
 							<ul>
 								<li><a href="#footer">Contact</a></li>
 							</ul>
 						</nav>
 					</header>
+
+					<header id="header" class="mobile-header">
+						<h1 class="menu-item-mobile">
+							<a href="index.html"><strong>Alex Skye</strong></a>
+						</h1>
+						<nav><button class="hamburger-toggle" >MENU</button></nav>
+					</header>
+
+					<div class="menu-overlay">
+						<h1 class="menu-close">X</h1>
+						<h1 class="menu-item-mobile">
+							<a href="index.html">[portfolio]</a>
+						</h1>
+						<h1 class="menu-item-mobile">
+							<a href="stickers.html">Sticker Designs</a>
+						</h1>
+						<h1 class="menu-item-mobile"><a href="#footer">Contact</a></h1>
+					</div>
 
 				<!-- Main -->
 					<div id="main">
@@ -115,6 +134,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function menuOpen(){
+					$('.menu-overlay').show()	
+					$('.mobile-header').hide()
+					$('#main').hide()
+					$('body').css({paddingTop:0})
+				}
+				function menuClose(){
+					$('.menu-overlay').hide()	
+					$('.mobile-header').show()
+					$('#main').show()
+					$('body').css({paddingTop:'4em'})
+				}
 
+				$('.hamburger-toggle').on('click',menuOpen)
+				$('.menu-close').on('click', menuClose)
+			</script>
 	</body>
 </html>
