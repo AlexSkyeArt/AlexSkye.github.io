@@ -2056,6 +2056,11 @@ input, select, textarea {
 	.menu-item{
 		padding:0 20px;
 	}
+	.svg{
+		width: 298.82px;
+		height: 86.93px;
+		
+	}
 }
 
 @media screen and (min-width: 740px){
